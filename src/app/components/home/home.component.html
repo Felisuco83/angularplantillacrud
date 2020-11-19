@@ -1,0 +1,27 @@
+<ng-container *ngIf="personas != null">
+  <h1 style="color: red">Ver plantilla funcion</h1>
+  <table class="table table-dark">
+    <thead>
+      <th>Apellido</th>
+      <th>Funcion</th>
+      <th>Turno</th>
+      <th>Salario</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let persona of personas">
+        <td>{{ persona.apellido }}</td>
+        <td>{{ persona.funcion }}</td>
+        <td>{{ persona.turno }}</td>
+        <td>{{ persona.salario }}</td>
+        <td>
+          <a
+            [routerLink]="['/detalles', persona.idEmpleado]"
+            class="btn btn-info"
+            >Detalles</a
+          >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ng-container>

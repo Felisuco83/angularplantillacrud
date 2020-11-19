@@ -1,0 +1,13 @@
+<h1 style="color: brown">Incrementar salario personas</h1>
+<form #formAumento="ngForm">
+  <select #funcion>
+    <option *ngFor="let funcion of funciones" value="{{ funcion }}">
+      {{ funcion }}
+    </option>
+  </select>
+  <label>Cantidad a aumentar</label>
+  <input type="number" #cantidad class="form-control" /><br />
+  <button (click)="modificarSalario()" class="btn btn-success">
+    Modificar salario
+  </button>
+</form>
